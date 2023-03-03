@@ -91,8 +91,8 @@ const SignUpScreen = ({ navigation }) => {
             <Image source={image ? { uri: image.path } : { uri: 'https://cdn4.iconfinder.com/data/icons/camping-outline-pt-4/100/125_-_photo_camera_snapshot-512.png' }} style={styles.addedImage} />
           </TouchableOpacity>
         </View>
-        <Text style={{ color: '#000', fontSize: 30, fontWeight: '900', textAlign: 'center', paddingHorizontal: 20 }}>Record spendings & income</Text>
-        <Text style={{ color: '#9ba8bd', fontSize: 21, textAlign: 'center', paddingHorizontal: 25 }}>Just add transactions and you'll always know where your money goes</Text>
+        <Text style={{ color: '#000', fontSize: 20, fontWeight: 'bold', textAlign: 'center', paddingHorizontal: 20,marginTop:hp('5%') }}>Record spendings & income</Text>
+        <Text style={{ color: '#9ba8bd', fontSize:18, textAlign: 'center', paddingHorizontal: 25,marginTop: 5  }}>Just add transactions and you'll always know where your money goes</Text>
       </View>
       <View style={styles.bullettinView}>
         <TouchableOpacity activeOpacity={.1}>
@@ -122,9 +122,9 @@ const SignUpScreen = ({ navigation }) => {
           </TouchableOpacity >
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: hp('4%') }}>
-          <Text style={{ color: '#000', fontSize: 15, textAlign: 'center' }}>Already have an account?</Text>
+          <Text style={{ color: '#000', fontSize: 15, textAlign: 'center', fontWeight: '400' }}>Already have an account?</Text>
           <TouchableOpacity onPress={() => { navigation.navigate('LoginScreen', { image }) }}>
-            <Text style={{ color: '#000', fontSize: 15, textAlign: 'center' }}> Sign In</Text>
+            <Text style={{ color: '#000', fontSize: 15, textAlign: 'center', fontWeight: 'bold', borderBottomWidth: 1 }}> Sign In</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -142,33 +142,30 @@ const styles = StyleSheet.create({
   imageContainer: {
     height: hp('60%'),
     width: wp('100%'),
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    marginTop: 25,
   },
   imageViewContainer: {
-//     height:50,
-// width:50,
-    height: hp('30%'),
-    width: wp('60%'),
-    backgroundColor: '#fff',
-    marginLeft: hp('11%'),
-    marginTop: hp('10%'),
+    height: 250,
+    width: 250,
+    marginLeft: 80,
+    marginTop: 30,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: hp('15%'),
-    backgroundColor: '#dce0e6'
+    borderRadius: 125,
   },
   addedImage: {
-    height: hp('30%'),
-    width: wp('60%'),
-    borderRadius: hp('15%'),
+    height: 250,
+    width: 250,
+    borderRadius: 125,
   },
   addImage: {
-    height: hp('30%'),
-    width: wp('60%'),
-    borderRadius: hp('15%'),
+    height: 250,
+    width: 250,
+    borderRadius: 125,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#dce0e6'
+    backgroundColor: '#e8e4e3'
   },
   icon1: {
     marginLeft: hp('13%'),

@@ -80,8 +80,8 @@ const PopupScreen = ({ route, navigation }) => {
             <Image source={image ? { uri: image.path } : { uri: 'https://cdn4.iconfinder.com/data/icons/camping-outline-pt-4/100/125_-_photo_camera_snapshot-512.png' }} style={styles.addedImage} />
           </TouchableOpacity>
         </View>
-        <Text style={{ color: '#000', fontSize: 30, fontWeight: '900', textAlign: 'center', paddingHorizontal: 20, marginTop: 20 }}>Getting started is easy</Text>
-        <Text style={{ color: '#9ba8bd', fontSize: 19, textAlign: 'center', paddingHorizontal: 26, marginTop: 10 }}>Create your user and workspace name,add coworkers and you're in</Text>
+        <Text style={{ color: '#000', fontSize: 20, fontWeight: 'bold', textAlign: 'center', paddingHorizontal: 20,marginTop:hp('5%') }}>Getting started is easy</Text>
+        <Text style={{ color: '#9ba8bd', fontSize: 19, textAlign: 'center', paddingHorizontal: 26, marginTop: 5 }}>Create your user and workspace name,add coworkers and you're in</Text>
       </View>
       <View style={styles.buttonContainerView}>
         <View style={styles.backButtonView}>
@@ -115,27 +115,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   imageViewContainer: {
-    height: hp('30%'),
-    width: wp('60%'),
-    backgroundColor: '#fff',
-    marginLeft: hp('11%'),
-    marginTop: hp('10%'),
+    height: 250,
+    width: 250,
+    marginLeft: 80,
+    marginTop: 30,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: hp('15%'),
-    backgroundColor: '#dce0e6'
+    borderRadius: 125,
   },
   addedImage: {
-    height: hp('30%'),
-    width: wp('60%'),
-    borderRadius: hp('15%'),
+    height: 250,
+    width: 250,
+    borderRadius: 125,
   },
   addImage: {
-    height: hp('30%'),
-    width: wp('50%'),
-    borderRadius: hp('50%'),
+    height: 250,
+    width: 250,
+    borderRadius: 125,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#e8e4e3'
   },
   icon1: {
     marginLeft: hp('13%'),
@@ -152,7 +151,6 @@ const styles = StyleSheet.create({
   backButtonView: {
     padding: 15,
     paddingLeft: 15
-    // paddingRight: hp('0%')
   },
   backButton: {
     alignItems: 'center',
@@ -167,7 +165,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 25,
     borderRadius: 5,
-    marginLeft: hp('20%'),
+    marginLeft: hp('5%'),
     backgroundColor: '#000',
   },
   cameraButton: {

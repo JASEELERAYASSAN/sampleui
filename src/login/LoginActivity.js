@@ -7,7 +7,7 @@ import Toast from 'react-native-simple-toast'
 
 const LoginActivity = ({ navigation, route }) => {
 
-    const [image,setImage] =useState(route.params.image)
+    const [image, setImage] = useState(route.params.image)
     const [country, setCountry] = useState(['+91'])
     const [phoneNumber, setPhoneNumber] = useState('')
     const [isLoading, setIsLoading] = useState(false)
@@ -18,7 +18,7 @@ const LoginActivity = ({ navigation, route }) => {
             const confirmation = await auth().signInWithPhoneNumber(number);
             if (confirmation.state != "error") {
                 setIsLoading(false);
-                navigation.navigate('LoginOtp', { confirm: confirmation });
+                navigation.navigate('LoginOtp', { confirm: confirmation, image });
                 console.log("confirmation", confirmation);
             }
         } catch (error) {

@@ -50,7 +50,7 @@ const LoginOtp = ({ navigation, route }) => {
             <View style={styles.enterText}>
                 <Text style={styles.enterOtp}>Enter  OTP</Text>
                 <Text style={styles.OtpSubtext}>We have sent an OTP to  </Text>
-                <TouchableOpacity onPress={() => navigation.navigate('LoginActivity')}>
+                <TouchableOpacity onPress={() => navigation.navigate('LoginActivity',{image})}>
                     <Text style={styles.changeNumber}>CHANGE NUMBER</Text>
                 </TouchableOpacity>
             </View>
@@ -92,11 +92,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     enterOtp: {
-        color: 'black',
-        fontSize: hp('2.20%'),
+        color: '#000',
+        fontSize: hp('2.5%'),
         fontFamily: 'Manrope-Bold',
-        marginLeft: wp('6.50%'),
-        fontWeight:'900',
+        fontWeight:'600',
         textAlign:'center',
         alignItems: 'center',
         backgroundColor: '#fff'
@@ -108,7 +107,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     OtpSubtext: {
-        fontSize: hp('1.65%'),
+        fontSize: hp('2%'),
         marginLeft: wp('6.50%'),
         color: '#000',
         fontWeight: '400',
@@ -116,22 +115,21 @@ const styles = StyleSheet.create({
         marginTop: hp('2%'),
     },
     changeNumber: {
-        fontSize: hp('1.55%'),
+        fontSize: hp('2%'),
         color: '#FFD700',
         fontFamily: 'Manrope-Bold',
-        marginLeft: wp('6.50%'),
         textAlign:'center',
         alignItems: 'center',
         backgroundColor: '#fff'
     },
     enterPin: {
+        color: '#000',
         height: hp('6.75%'),
         width: wp('90%'),
         margin: wp('1%'),
         padding: 10,
         marginLeft: wp('6.50%'),
         marginTop: 10,
-
     },
     submitButton: {
         flexDirection: 'row',
